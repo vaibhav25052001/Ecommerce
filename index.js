@@ -7,7 +7,7 @@ import cors from 'cors'
 import categoryRoutes from './routes/categoryRoute.js'
 import productRoutes from './routes/productRoute.js'
 import path from 'path'
-
+import {fileURLToPath} from 'url'
 
 //config env
 dotenv.config()
@@ -15,6 +15,9 @@ dotenv.config()
 //database connect
 ConnectDB();
 
+//esmodule fix
+const __filename=fileURLToPath(import.meta.url)
+const __dirname=path.dirname(__filename)
 const app=express();
 
 app.use(express.json())
