@@ -36,5 +36,5 @@ app.use('*',function(req,res){
 })
 const PORT=process.env.PORT || 9950;
 app.listen(PORT,()=>{
-    console.log(`Server started on ${process.env.DEV_MODE} on ${PORT}`)
+   // console.log(`Server started on ${process.env.DEV_MODE} on ${PORT}`)
 })
